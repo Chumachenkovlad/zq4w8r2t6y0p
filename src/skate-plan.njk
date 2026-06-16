@@ -1,0 +1,418 @@
+---
+layout: base.njk
+permalink: /skate-plan.html
+title: "Скейт-план · від базової їзди до трюків"
+fonts: "https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+styles:
+  - /assets/css/skate.css
+scripts:
+  - src: /assets/js/storage.js
+  - src: /assets/js/skate.js
+hub:
+  group: training
+  order: 40
+  title: "Скейт-план"
+  summary: "Покроковий roadmap від першого поштовху до перших трюків — 3 фази (База їзди → Контроль дошки → Базові трюки), 10 кроків із трекером прогресу. Адаптовано під goofy-стійку та сетап деки 8.25\"."
+  chips: ["Скейт", "Goofy", "10 кроків"]
+  meta: "Beginner → Trick"
+  accent: "#2dd4bf"
+steps:
+  - id: 1
+    phaseLabel: "База їзди"
+    phaseNum: "01"
+    label: "Перші хвилини"
+    title: "Стійка та баланс"
+    goal: "стояти на дошці впевнено й не боятися її руху."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Розташування ніг на дошці у стійці goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <!-- board -->
+        <g transform="translate(40,40)">
+          <path d="M0,35 q0,-33 35,-33 h170 q35,0 35,33 q0,33 -35,33 h-170 q-35,0 -35,-33 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <g fill="#17150F" opacity=".4"><circle cx="35" cy="20" r="3"/><circle cx="50" cy="20" r="3"/><circle cx="35" cy="50" r="3"/><circle cx="50" cy="50" r="3"/><circle cx="190" cy="20" r="3"/><circle cx="205" cy="20" r="3"/><circle cx="190" cy="50" r="3"/><circle cx="205" cy="50" r="3"/></g>
+          <!-- front (right) foot over front bolts, now on the left/nose side -->
+          <rect x="24" y="14" width="46" height="42" rx="10" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5" transform="rotate(12 47 35)"/>
+          <!-- back (left) foot on tail, now on the right -->
+          <rect x="174" y="16" width="44" height="38" rx="10" fill="#17150F"/>
+          <text x="-5" y="-8" fill="#FF4A1C" font-family="JetBrains Mono" font-size="11" font-weight="700">ПЕРЕДНЯ · ПРАВА</text>
+          <text x="150" y="-8" fill="#17150F" font-family="JetBrains Mono" font-size="11" font-weight="700">ЗАДНЯ · ЛІВА</text>
+          <text x="120" y="92" fill="#6B6657" font-family="JetBrains Mono" font-size="10" text-anchor="middle">НОГИ ~ НА ШИРИНІ ПЛЕЧЕЙ · НАД БОЛТАМИ</text>
+        </g>
+      </svg>
+    how:
+      - "Спершу стань на дошку на траві або килимі — так колеса не котяться, і ти звикнеш до балансу."
+      - "Ступні — поперек дошки, приблизно над болтами кожного траку, на ширині плечей."
+      - "Коліна трохи зігнуті, центр ваги — низько й по центру дошки. Дивись уперед, а не під ноги."
+      - "Поперекочуйся на дуже пологій рівній поверхні, ловлячи відчуття «дошка живе під ногами»."
+    mistakes:
+      - "Прямі ноги й напружене тіло — баланс зникає. Згинай коліна."
+      - "Погляд у ноги — веде до втрати рівноваги. Дивись туди, куди їдеш."
+      - "Вага лише на п'ятах або лише на носках — тримай по центру."
+    tip: "10–15 хвилин просто постояти й покататися по інерції економлять тобі тижні падінь далі."
+    video: "https://www.youtube.com/results?search_query=how+to+stand+on+a+skateboard+beginner+regular+goofy"
+    reps: "1–2 сесії"
+  - id: 2
+    label: "Рух уперед"
+    title: "Поштовх (Push)"
+    goal: "впевнено набирати швидкість і повертати передню ногу в стійку."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Поштовх лівою (задньою) ногою, goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(45,35)">
+          <path d="M0,35 q0,-33 35,-33 h170 q35,0 35,33 q0,33 -35,33 h-170 q-35,0 -35,-33 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <!-- front (right) foot pointing forward, nose side = left -->
+          <rect x="50" y="6" width="40" height="54" rx="10" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <text x="8" y="-8" fill="#FF4A1C" font-family="JetBrains Mono" font-size="10" font-weight="700">← ПЕРЕДНЯ ПРАВА</text>
+        </g>
+        <!-- pushing (left) foot on ground, on the tail side = right -->
+        <rect x="216" y="105" width="44" height="22" rx="8" fill="#17150F"/>
+        <path d="M238,98 q6,-30 2,-46" fill="none" stroke="#FF4A1C" stroke-width="3" stroke-dasharray="5 5" marker-end="url(#ar)"/>
+        <text x="170" y="125" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">ЗАДНЯ ЛІВА ШТОВХАЄ</text>
+        <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#FF4A1C"/></marker></defs>
+        <line x1="130" y1="135" x2="20" y2="135" stroke="#FF4A1C" stroke-width="3" marker-end="url(#ar)"/>
+        <text x="40" y="128" fill="#6B6657" font-family="JetBrains Mono" font-size="10">← НАПРЯМОК РУХУ</text>
+      </svg>
+    how:
+      - "Передня нога повертається <b>вздовж дошки носком уперед</b> і стоїть над передніми болтами."
+      - "Задньою ногою роби плавні поштовхи від п'ятки до носка по асфальту — не «копай», а штовхай."
+      - "Після поштовху ставиш задню ногу назад на тейл і <b>повертаєш обидві ступні поперек</b> у стійку."
+      - "Працюй обома ногами почергово, поки рух не стане автоматичним."
+    mistakes:
+      - "Поштовх передньою ногою (mongo) — псує баланс під трюки далі. Штовхай задньою."
+      - "Передня нога стоїть поперек під час поштовху — тебе хитає. Розвертай її вперед."
+      - "Різкі короткі копання замість довгих рівних поштовхів."
+    tip: "один поштовх → проїхав по інерції в стійці → ще поштовх. Не поспішай із серіями."
+    video: "https://www.youtube.com/results?search_query=how+to+push+a+skateboard+beginner"
+    reps: "2–3 сесії"
+  - id: 3
+    label: "Контроль напрямку"
+    title: "Повороти / Карвінг"
+    goal: "керувати напрямком нахилом тіла, а не страхом."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Поворот нахилом ваги — goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <path d="M280,120 Q160,120 70,40" fill="none" stroke="#6B6657" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#ar3)"/>
+        <defs><marker id="ar3" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#6B6657"/></marker></defs>
+        <g transform="translate(170,75) rotate(30)">
+          <path d="M-100,12 q0,-30 30,-30 h140 q30,0 30,30 q0,30 -30,30 h-140 q-30,0 -30,-30 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="-78" y="-16" width="40" height="36" rx="9" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <rect x="35" y="-14" width="38" height="34" rx="9" fill="#17150F"/>
+        </g>
+        <text x="155" y="40" fill="#FF4A1C" font-family="JetBrains Mono" font-size="11" font-weight="700">НА НОСКИ → BACKSIDE</text>
+        <text x="155" y="58" fill="#17150F" font-family="JetBrains Mono" font-size="11" font-weight="700">НА П'ЯТИ → FRONTSIDE</text>
+      </svg>
+    how:
+      - "Набери невелику швидкість — на повільній дошці повертати важче, ніж на котячій."
+      - "Щоб повернути, плавно перенось вагу: на <b>носки</b> — дошка йде в один бік, на <b>п'яти</b> — в інший."
+      - "Веди поворот плечима й стегнами, ноги лише дотискають. Рухи м'які, без ривків."
+      - "Покатайся «змійкою»: ліво-право-ліво, з'єднуючи плавні дуги — це і є карвінг."
+    mistakes:
+      - "Затиснуті труки — підкрути ключем гайку так, щоб дошка слухняно нахилялась."
+      - "Різкий ривок вагою — дошка вилітає. Все плавно."
+      - "Спроба повертати на майже нульовій швидкості."
+    tip: "якщо труки занадто тугі/вільні — це нормально регулювати під себе. Шукай баланс «слухняно, але стабільно»."
+    video: "https://www.youtube.com/results?search_query=how+to+turn+and+carve+on+a+skateboard+beginner"
+    reps: "2 сесії"
+  - id: 4
+    label: "Безпека"
+    title: "Гальмування"
+    goal: "зупинятися контрольовано в будь-який момент."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Гальмування лівою ногою об асфальт — goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(60,40)">
+          <path d="M0,30 q0,-28 30,-28 h150 q30,0 30,28 q0,28 -30,28 h-150 q-30,0 -30,-28 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="40" y="-12" width="40" height="36" rx="9" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <text x="35" y="-22" fill="#FF4A1C" font-family="JetBrains Mono" font-size="10" font-weight="700">ВАГА НА ПРАВУ</text>
+        </g>
+        <rect x="210" y="100" width="50" height="20" rx="8" fill="#17150F"/>
+        <g stroke="#FF4A1C" stroke-width="2.5"><line x1="218" y1="124" x2="212" y2="132"/><line x1="234" y1="124" x2="228" y2="132"/><line x1="250" y1="124" x2="244" y2="132"/></g>
+        <text x="155" y="146" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">ЛІВА ВОЛОЧИТЬ ПЛАЗОМ ПО АСФАЛЬТУ</text>
+      </svg>
+    how:
+      - "<b>Foot brake</b> — основний спосіб: вага на передній нозі, задню опускаєш і м'яко притискаєш підошвою до асфальту."
+      - "Притискай поступово, всією плоскою стопою — не п'ятою, інакше нога зіскочить."
+      - "Альтернатива на малій швидкості — притиснути тейл до землі (tail scrape), але це стирає дошку."
+      - "Відпрацюй зупинку до повного стопу з різних швидкостей."
+    mistakes:
+      - "Різко вкинути ногу на повній швидкості — тебе смикне вперед. Гальмуй плавно."
+      - "Вага лишилась на задній нозі — дошка вилітає з-під тебе."
+      - "Гальмування лише носком/п'ятою замість усієї підошви."
+    tip: "навчись зупинятися <i>раніше</i>, ніж розганятися сильно. Це твоя страховка."
+    video: "https://www.youtube.com/results?search_query=how+to+stop+on+a+skateboard+foot+brake+beginner"
+    reps: "1 сесія"
+  - id: 5
+    phaseLabel: "Контроль дошки"
+    phaseNum: "02"
+    label: "Маневреність"
+    title: "Тік-так (Tic-Tac)"
+    goal: "рухатись і керувати дошкою без поштовху ногою об землю."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Тік-так goofy: ніс уліво, вага на тейл праворуч">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(60,60)">
+          <path d="M0,25 q0,-23 25,-23 h150 q25,0 25,23 q0,23 -25,23 h-150 q-25,0 -25,-23 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="10" y="-10" width="40" height="34" rx="9" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <rect x="158" y="-10" width="40" height="34" rx="9" fill="#17150F"/>
+          <text x="142" y="-22" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">ВАГА НА ТЕЙЛ →</text>
+        </g>
+        <path d="M40,20 q-30,30 0,60" fill="none" stroke="#FF4A1C" stroke-width="3" marker-start="url(#arS)" marker-end="url(#arE)"/>
+        <defs>
+          <marker id="arE" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#FF4A1C"/></marker>
+          <marker id="arS" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6 z" fill="#FF4A1C"/></marker>
+        </defs>
+        <text x="22" y="105" fill="#FF4A1C" font-family="JetBrains Mono" font-size="10" font-weight="700">НІС ВИЛЯЄ ←→</text>
+      </svg>
+    how:
+      - "Перенеси вагу на задню ногу так, щоб ніс дошки трохи піднявся над землею."
+      - "У цьому положенні легко вертай ніс убік — вліво, потім вправо, ритмічно."
+      - "Кожне виляння носом потроху штовхає тебе вперед — це дає швидкість без ноги об землю."
+      - "Поєднай з поворотами: тік-так чудово «довозить» тебе там, де немає де штовхнутись."
+    mistakes:
+      - "Задирати ніс надто високо — втрачаєш баланс. Достатньо ледь відірвати."
+      - "Виляти тільки в один бік — рух має бути симетричним маятником."
+    tip: "тік-так тренує те саме перенесення ваги на тейл, що знадобиться в олі."
+    video: "https://www.youtube.com/results?search_query=how+to+tic+tac+on+a+skateboard"
+    reps: "1–2 сесії"
+  - id: 6
+    label: "Баланс на ходу"
+    title: "Меньюал (Manual)"
+    goal: "їхати на задніх колесах, тримаючи рівновагу — база для багатьох трюків."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Меньюал goofy: ніс піднято вліво, задні колеса справа">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(50,30) rotate(14 130 50)">
+          <path d="M0,30 q0,-28 30,-28 h150 q30,0 30,28 q0,28 -30,28 h-150 q-30,0 -30,-28 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="40" y="-12" width="40" height="36" rx="9" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <rect x="150" y="-12" width="40" height="36" rx="9" fill="#17150F"/>
+          <circle cx="175" cy="62" r="11" fill="#17150F"/>
+        </g>
+        <line x1="40" y1="118" x2="290" y2="118" stroke="#6B6657" stroke-width="2"/>
+        <text x="45" y="138" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">НІС ПІДНЯТО · ВАГА БАЛАНСУЄ НА ОСІ ЗАДНІХ КОЛІС</text>
+        <path d="M170,40 q0,-18 0,30" fill="none" stroke="#FF4A1C" stroke-width="2.5" marker-start="url(#arS)" marker-end="url(#arE)"/>
+      </svg>
+    how:
+      - "Їдь з невеликою швидкістю, ноги — передня ближче до центру, задня на тейлі."
+      - "Плавно тисни на тейл, доки ніс не підніметься. Балансуй у «точці рівноваги»."
+      - "Корекція — стопами й щиколотками, а не всім корпусом. Дивись уперед."
+      - "Мета — протриматись довше з кожним разом. Спочатку 1 секунда, потім 2, 3…"
+    mistakes:
+      - "Перетиснув тейл → впав назад. Не страшно: тримай руки готовими, шукай точку."
+      - "Дивишся на ніс дошки замість горизонту."
+      - "Намагаєшся балансувати на нульовій швидкості — рух дає стабільність."
+    tip: "меньюал — це той самий контроль тейлу, що годує олі. Час витрачений тут окупиться."
+    video: "https://www.youtube.com/results?search_query=how+to+manual+skateboard+beginner"
+    reps: "3+ сесії"
+  - id: 7
+    label: "Підготовка до олі"
+    title: "Щиглик тейлом (Pop)"
+    goal: "навчитися «вистрілювати» тейл — рух, що піднімає дошку в повітря."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Поп goofy: тейл б'є об землю праворуч">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(60,30) rotate(-18 110 40)">
+          <path d="M0,28 q0,-26 28,-26 h150 q28,0 28,26 q0,26 -28,26 h-150 q-28,0 -28,-26 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="20" y="-12" width="38" height="34" rx="9" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <rect x="128" y="-12" width="38" height="34" rx="9" fill="#17150F"/>
+        </g>
+        <line x1="40" y1="120" x2="290" y2="120" stroke="#6B6657" stroke-width="2"/>
+        <path d="M205,118 l-8,14 M220,120 l-6,14 M235,120 l-6,14" stroke="#FF4A1C" stroke-width="2.5"/>
+        <text x="120" y="146" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">ЛІВА ВДАРЯЄ ТЕЙЛОМ → «ЩИГ!»</text>
+      </svg>
+    how:
+      - "Стоячи на місці (можна на траві), різко вдар тейлом об землю задньою ногою — чіткий «щиг»."
+      - "Слухай звук: дзвінкий ляск означає правильний різкий поп, глухий — ти тиснеш, а не б'єш."
+      - "Передня нога поки просто стоїть. Зосередься лише на пружному ударі тейлу."
+      - "Повтори сотні разів, доки рух не стане різким і автоматичним."
+    mistakes:
+      - "Повільне «продавлювання» тейлу замість різкого удару."
+      - "Вага не встигає піднятись — стрибай разом із дошкою, а не лишайся внизу."
+    tip: "це окремий крок навмисно — без чіткого попу олі не вийде ніколи."
+    video: "https://www.youtube.com/results?search_query=how+to+pop+the+tail+skateboard+ollie+practice"
+    reps: "1–2 сесії"
+  - id: 8
+    phaseLabel: "Базові трюки"
+    phaseNum: "03"
+    label: "Король усіх трюків"
+    title: "Олі (Ollie)"
+    goal: "підняти дошку в повітря разом із собою. Це фундамент 90% трюків далі."
+    svg: |
+      <svg class="diagram" viewBox="0 0 340 170" role="img" aria-label="Чотири фази олі — goofy">
+        <rect width="340" height="170" fill="#fff"/>
+        <line x1="0" y1="120" x2="340" y2="120" stroke="#c9c3b2" stroke-width="2"/>
+        <!-- frame 1: crouch -->
+        <g transform="translate(10,95)">
+          <path d="M0,12 h64 q8,0 8,-8 v-2 q0,-8 -8,-8 h-64 q-8,0 -8,8 v2 q0,8 8,8z" fill="#DCD7CB" stroke="#17150F" stroke-width="2"/>
+          <rect x="2" y="-18" width="20" height="14" rx="4" fill="#FF4A1C" stroke="#17150F" stroke-width="1.5"/>
+          <rect x="42" y="-18" width="18" height="14" rx="4" fill="#17150F"/>
+          <text x="0" y="36" fill="#6B6657" font-family="JetBrains Mono" font-size="9">1·ПРИСІД</text>
+        </g>
+        <!-- frame 2: pop (tail on right going down) -->
+        <g transform="translate(95,90) rotate(-20 36 14)">
+          <path d="M0,12 h64 q8,0 8,-8 v-2 q0,-8 -8,-8 h-64 q-8,0 -8,8 v2 q0,8 8,8z" fill="#DCD7CB" stroke="#17150F" stroke-width="2"/>
+          <rect x="2" y="-18" width="20" height="14" rx="4" fill="#FF4A1C" stroke="#17150F" stroke-width="1.5"/>
+          <rect x="44" y="-18" width="18" height="14" rx="4" fill="#17150F"/>
+        </g>
+        <text x="95" y="131" fill="#6B6657" font-family="JetBrains Mono" font-size="9">2·ПОП ТЕЙЛОМ</text>
+        <!-- frame 3: slide (front/right foot slides leftward toward nose) -->
+        <g transform="translate(185,72) rotate(8 36 14)">
+          <path d="M0,12 h64 q8,0 8,-8 v-2 q0,-8 -8,-8 h-64 q-8,0 -8,8 v2 q0,8 8,8z" fill="#DCD7CB" stroke="#17150F" stroke-width="2"/>
+          <rect x="22" y="-18" width="22" height="14" rx="4" fill="#FF4A1C" stroke="#17150F" stroke-width="1.5"/>
+          <path d="M20,-11 l-20,-6" stroke="#FF4A1C" stroke-width="2.5" marker-end="url(#arE)"/>
+          <rect x="50" y="-18" width="16" height="14" rx="4" fill="#17150F"/>
+        </g>
+        <text x="178" y="131" fill="#6B6657" font-family="JetBrains Mono" font-size="9">3·ТЯГНЕШ ПРАВУ ←</text>
+        <!-- frame 4: level -->
+        <g transform="translate(272,64)">
+          <path d="M0,12 h64 q8,0 8,-8 v-2 q0,-8 -8,-8 h-64 q-8,0 -8,8 v2 q0,8 8,8z" fill="#DCD7CB" stroke="#17150F" stroke-width="2"/>
+          <rect x="6" y="-18" width="20" height="14" rx="4" fill="#FF4A1C" stroke="#17150F" stroke-width="1.5"/>
+          <rect x="42" y="-18" width="18" height="14" rx="4" fill="#17150F"/>
+          <path d="M32,22 l0,12" stroke="#FF4A1C" stroke-width="2.5" marker-end="url(#arE)"/>
+        </g>
+        <text x="272" y="131" fill="#6B6657" font-family="JetBrains Mono" font-size="9">4·ВИРІВНЯВ</text>
+      </svg>
+    how:
+      - "<b>Стійка:</b> <b>ліва (задня)</b> носком на краю тейлу, <b>права (передня)</b> — посередині дошки."
+      - "<b>Присід:</b> зігни коліна, опусти центр ваги."
+      - "<b>Поп:</b> різко вистрель тейлом униз <b>лівою</b> й одночасно вистрибни вгору."
+      - "<b>Слайд:</b> у стрибку тягни <b>праву</b> ногу боковою стороною кросівка вгору до носа дошки (уперед — тобто вліво по дошці)."
+      - "<b>Рівняння:</b> у верхній точці вирівняй дошку обома ногами горизонтально."
+      - "<b>Приземлення:</b> сідай на дошку <b>обома ногами над болтами</b>, гаси удар зігнутими колінами."
+    mistakes:
+      - "Не тягнеш передню ногу — дошка не злітає рівно. Веди кросівком по гриптейпу вгору."
+      - "Поп і стрибок нарізно. Це має бути один вибуховий рух."
+      - "Приземлення серединою дошки замість болтів — ризик зламати дошку й себе."
+      - "Вчиш олі на ходу. Спочатку — стоячи на місці (на траві чи об бордюр)."
+    tip: "розбий олі на «поп окремо» і «слайд окремо», а потім склей. Це найдовший крок у плані — заклади на нього кілька тижнів і не злися на себе."
+    video: "https://www.youtube.com/results?search_query=how+to+ollie+for+beginners+step+by+step"
+    reps: "2–4 тижні"
+  - id: 9
+    label: "Перше обертання"
+    title: "Поп-шувіт (Pop Shuvit)"
+    goal: "крутнути дошку на 180° під ногами й приземлитись назад на неї."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Обертання дошки на 180 градусів — goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(110,40)">
+          <path d="M0,30 q0,-28 28,-28 h44 q28,0 28,28 q0,28 -28,28 h-44 q-28,0 -28,-28 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <circle cx="50" cy="8" r="5" fill="#FF4A1C"/>
+          <text x="40" y="-6" fill="#FF4A1C" font-family="JetBrains Mono" font-size="9">NOSE ←</text>
+        </g>
+        <path d="M250,90 a90,40 0 1 1 -180,0" fill="none" stroke="#FF4A1C" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#arE)"/>
+        <text x="115" y="135" fill="#17150F" font-family="JetBrains Mono" font-size="11" font-weight="700">ДОШКА КРУТИТЬСЯ 180°</text>
+      </svg>
+    how:
+      - "Стійка майже як в олі, але задня нога готова «зачерпнути» тейл назад."
+      - "Роби поп і одночасно <b>скребком задньої ноги</b> крутни дошку назад на пів-оберта."
+      - "Підтягни ноги, дай дошці провернутись на 180° під тобою."
+      - "Лови дошку ногами над болтами й приземляйся з зігнутими колінами."
+    mistakes:
+      - "Дошка крутиться, але летить уперед/назад — тримай скреб рівним, не штовхай убік."
+      - "Не підстрибуєш — ноги заважають обертанню. Підбирай їх вище."
+      - "Намагаєшся ловити дошку очима — лови ногами, дивись по центру."
+    tip: "спершу можна вчити звичайний shuvit без попу (дошка не злітає), а вже потім додати поп."
+    video: "https://www.youtube.com/results?search_query=how+to+pop+shuvit+beginner+tutorial"
+    reps: "1–2 тижні"
+  - id: 10
+    label: "Олі + обертання тіла"
+    title: "Frontside / Backside 180"
+    goal: "зробити олі й розвернути себе разом із дошкою на 180°."
+    svg: |
+      <svg class="diagram" viewBox="0 0 320 150" role="img" aria-label="Олі з розворотом тіла на 180 градусів — goofy">
+        <rect width="320" height="150" fill="#fff"/>
+        <g transform="translate(90,55)">
+          <path d="M0,28 q0,-26 26,-26 h88 q26,0 26,26 q0,26 -26,26 h-88 q-26,0 -26,-26 z" fill="#DCD7CB" stroke="#17150F" stroke-width="3"/>
+          <rect x="14" y="-12" width="34" height="30" rx="8" fill="#FF4A1C" stroke="#17150F" stroke-width="2.5"/>
+          <rect x="92" y="-12" width="32" height="30" rx="8" fill="#17150F"/>
+        </g>
+        <path d="M260,30 q-100,-30 -200,0" fill="none" stroke="#FF4A1C" stroke-width="3" marker-end="url(#arE)"/>
+        <text x="80" y="20" fill="#FF4A1C" font-family="JetBrains Mono" font-size="11" font-weight="700">ПЛЕЧІ ВЕДУТЬ ОБЕРТ</text>
+        <text x="70" y="135" fill="#17150F" font-family="JetBrains Mono" font-size="10" font-weight="700">FRONTSIDE = ОБЛИЧЧЯМ УПЕРЕД · BACKSIDE = СПИНОЮ</text>
+      </svg>
+    how:
+      - "Перед попом <b>закрути плечі</b> в бік майбутнього обертання — це твій «завод пружини»."
+      - "Роби олі й одночасно розкручуй плечі та стегна, дошка йде слідом за тілом."
+      - "Голова веде обертання — повертай погляд туди, куди розвертаєшся."
+      - "Доверни до 180°, приземляйся в <b>fakie/switch</b> стійці над болтами."
+    mistakes:
+      - "Крутиш тільки ноги без плечей — оберт не доходить. Заводь корпус заздалегідь."
+      - "Недокрут до 90° — додай замаху плечима й трохи вищий олі."
+      - "Дивишся під ноги — голова має вести розворот."
+    tip: "backside 180 часто заходить легше — почни з того боку, що природніший саме тобі."
+    video: "https://www.youtube.com/results?search_query=how+to+frontside+backside+180+ollie+beginner"
+    reps: "2–3 тижні"
+---
+<div class="wrap">
+
+  <!-- HERO -->
+  <header>
+    <div class="stripe"></div>
+    <span class="kicker">Roadmap · Beginner → Trick</span>
+    <h1>Скейт<br><span class="o">план</span></h1>
+    <p class="lede">Покрокова прокачка від першого поштовху до перших трюків. Усе підлаштовано під <b>твою дошку та твою ногу</b> — не поспішай між кроками, кожен будує наступний.</p>
+
+    <!-- SETUP CARD -->
+    <div class="setup">
+      <div class="sub">// твій сетап</div>
+      <h2>Стандарт popsicle · під street + all-round</h2>
+      <div class="spec-grid">
+        <div class="spec"><div class="l">Ширина деки</div><div class="v">8.25"</div><div class="n">Золота середина: достатньо стабільно під трюки й комфортно під ногу 43-го.</div></div>
+        <div class="spec"><div class="l">Конкейв</div><div class="v">Mid</div><div class="n">Універсальний прогин — гарний контроль ногами без надто різкого «замка».</div></div>
+        <div class="spec"><div class="l">Розмір ноги</div><div class="v">EU 43</div><div class="n">≈ US 9.5–10, ступня ~27 см. Ідеально лягає на 8.25 — нога не звисає й не теліпається.</div></div>
+        <div class="spec"><div class="l">Висновок</div><div class="v">Беремо!</div><div class="n">Цей сетап нічого не обмежує до рівня базових трюків. Міняти нічого не треба.</div></div>
+      </div>
+
+      <!-- DECK + CONCAVE SVG -->
+      <svg class="setup-svg" viewBox="0 0 520 200" role="img" aria-label="Схема деки та профілю конкейву">
+        <!-- top-view popsicle -->
+        <g transform="translate(30,40)">
+          <path d="M0,40 q0,-38 40,-38 h180 q40,0 40,38 q0,38 -40,38 h-180 q-40,0 -40,-38 z" fill="#211e15" stroke="#F4C20D" stroke-width="3"/>
+          <!-- bolts -->
+          <g fill="#FF4A1C"><circle cx="40" cy="22" r="4"/><circle cx="60" cy="22" r="4"/><circle cx="40" cy="58" r="4"/><circle cx="60" cy="58" r="4"/><circle cx="200" cy="22" r="4"/><circle cx="220" cy="22" r="4"/><circle cx="200" cy="58" r="4"/><circle cx="220" cy="58" r="4"/></g>
+          <!-- width marker -->
+          <line x1="270" y1="2" x2="270" y2="78" stroke="#b9b3a3" stroke-width="1.5"/>
+          <text x="285" y="44" fill="#F4C20D" font-family="JetBrains Mono" font-size="13" font-weight="700">8.25"</text>
+          <text x="10" y="98" fill="#b9b3a3" font-family="JetBrains Mono" font-size="11">ВИД ЗВЕРХУ · POPSICLE</text>
+          <text x="20" y="-12" fill="#b9b3a3" font-family="JetBrains Mono" font-size="10">NOSE</text>
+          <text x="190" y="-12" fill="#b9b3a3" font-family="JetBrains Mono" font-size="10">TAIL</text>
+        </g>
+        <!-- concave cross section -->
+        <g transform="translate(330,40)">
+          <path d="M0,10 C20,10 30,52 75,52 C120,52 130,10 150,10" fill="none" stroke="#F4C20D" stroke-width="3"/>
+          <line x1="0" y1="10" x2="0" y2="70" stroke="#46412f" stroke-width="1.5"/>
+          <line x1="150" y1="10" x2="150" y2="70" stroke="#46412f" stroke-width="1.5"/>
+          <path d="M30,68 C30,55 120,55 120,68" fill="none" stroke="#FF4A1C" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="38" y="84" fill="#FF4A1C" font-family="JetBrains Mono" font-size="11">MID</text>
+          <text x="0" y="104" fill="#b9b3a3" font-family="JetBrains Mono" font-size="11">ПРОФІЛЬ · КОНКЕЙВ</text>
+        </g>
+      </svg>
+      <div class="setup-note"><b style="color:var(--hazard)">Стійка: GOOFY.</b> Попереду в тебе <b style="color:var(--accent)">права нога</b> — отже вона завжди стоїть над передніми болтами. Штовхаєшся, гальмуєш і робиш поп <b style="color:var(--accent)">лівою (задньою)</b> ногою. Усі схеми нижче перемальовано саме під тебе: ніс дошки дивиться вліво — так твій рух виглядає збоку, коли права попереду.</div>
+    </div>
+  </header>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar"><div class="progress-top"><span class="t">Твій прогрес</span><span class="c"><b id="pc-done">0</b>/<span id="pc-total">10</span> кроків</span></div><div class="bar"><span id="pc-fill"></span></div><button class="reset" id="resetBtn">скинути прогрес</button></div>
+
+  {% for step in steps %}
+  {% if step.phaseLabel %}
+  <div class="phase"><div class="num">{{ step.phaseNum }}</div><div class="meta"><div class="lbl">Фаза</div><div class="nm">{{ step.phaseLabel }}</div></div></div>
+  {% endif %}
+  <article class="step" data-id="{{ step.id }}"><div class="step-head"><div class="badge">{{ step.id }}</div><div class="step-titles"><div class="st-l">{{ step.label }}</div><h3>{{ step.title }}</h3></div><div class="chk">✓</div></div><div class="step-body"><div class="goal"><b>Мета:</b> {{ step.goal }}</div>{{ step.svg | safe }}<ol class="how">{% for item in step.how %}<li>{{ item | safe }}</li>{% endfor %}</ol><div class="mistakes"><div class="mh"><span>⚠</span>Типові помилки</div><ul>{% for item in step.mistakes %}<li>{{ item | safe }}</li>{% endfor %}</ul></div><div class="tip"><b>Фішка:</b> {{ step.tip | safe }}</div><div class="step-foot"><a class="vid" target="_blank" rel="noopener" href="{{ step.video }}">▶ Відеоурок</a><span class="reps">⏱ {{ step.reps }}</span></div></div></article>
+  {% endfor %}
+
+  <!-- WHAT'S NEXT -->
+  <footer>
+    <h4>Що далі?</h4>
+    <p style="font-size:.95rem">Коли ці 10 кроків стануть впевненими — у тебе є фундамент під <b>кікфліп</b>, <b>хілфліп</b>, мануали в комбо й перші перешкоди (бордюри, мануал-пед). Усе це будується на чистому олі, тож головне — не перестрибувати кроки.</p>
+
+    <h4 style="margin-top:22px">Рекомендовані канали</h4>
+    <div class="chan">
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Braille+Skateboarding+how+to">Braille Skateboarding</a>
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=Skateboarding+Made+Simple+tutorial">Skateboarding Made Simple</a>
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=how+to+skateboard+українською+уроки">Уроки українською</a>
+    </div>
+    <p class="fnote">⚠ Усе вчи в шоломі та захисті, особливо олі й обертання. Падіння — частина процесу: вчись групуватись і котитись, а не виставляти прямі руки. Кнопки «Відеоурок» відкривають підбірку актуальних роликів на YouTube за темою кроку.</p>
+    <div class="legend">// progress зберігається у цьому віджеті</div>
+  </footer>
+
+</div>
