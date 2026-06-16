@@ -12,11 +12,6 @@
       "id": "training",
       "label": "Тренувальні плани",
       "note": "Деталі по дисциплінах"
-    },
-    {
-      "id": "other",
-      "label": "Інше",
-      "note": ""
     }
   ],
   "items": [
@@ -60,16 +55,6 @@
       "tags": ["Скейт", "Goofy", "10 кроків"],
       "meta": "Beginner → Trick",
       "accent": "#2dd4bf"
-    },
-    {
-      "id": "portfolio",
-      "group": "other",
-      "file": "index.html",
-      "title": "Портфоліо",
-      "summary": "Особиста сторінка-візитка: про мене, проєкти та контакти.",
-      "tags": ["Про мене", "Проєкти"],
-      "meta": "Vladyslav Chumachenko",
-      "accent": "#7c6af7"
     }
   ]
 }
