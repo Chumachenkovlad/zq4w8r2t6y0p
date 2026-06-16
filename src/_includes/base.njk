@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ lang or 'uk' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="{{ viewport or 'width=device-width, initial-scale=1.0' }}">
+{% if noindex !== false %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<title>{{ title }}</title>
+{% if fonts %}<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{ fonts }}" rel="stylesheet">{% endif %}
+{% for src in headScripts %}<script src="{{ src }}"></script>
+{% endfor %}{% for href in styles %}<link rel="stylesheet" href="{{ href }}">
+{% endfor %}{% if inlineStyle %}<style>{{ inlineStyle | safe }}</style>{% endif %}
+</head>
+<body>
+{% if accentBar %}<div class="accent-bar"></div>{% endif %}
+{{ content | safe }}
+{% if pageData %}<script>window.__DATA__ = {{ pageData | json | safe }};</script>{% endif %}
+{% for s in scripts %}<script{% if s.type %} type="{{ s.type }}"{% endif %}{% if s.presets %} data-presets="{{ s.presets }}"{% endif %} src="{{ s.src }}"></script>
+{% endfor %}</body>
+</html>

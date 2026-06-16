@@ -1,0 +1,447 @@
+---
+layout: base.njk
+permalink: /basketball.html
+title: "Basketball Training Plan"
+fonts: "https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+styles:
+  - /assets/css/basketball.css
+scripts:
+  - src: /assets/js/storage.js
+  - src: /assets/js/basketball.js
+hub:
+  group: training
+  order: 30
+  title: "Basketball Training Plan"
+  summary: "Індивідуальний план на 4 тижні, 3 тренування на тиждень: День 1 — Атака, День 2 — Захист, День 3 — Гра. Лише майданчик і мʼяч. Кожна вправа з поясненням «чому це працює»."
+  chips: ["Баскетбол", "4 тижні", "3×/тиждень"]
+  meta: "Майданчик + мʼяч"
+  accent: "#ff9447"
+days:
+  - id: day1
+    tab: "День 1 · Атака"
+    meta:
+      - "⏱ <strong>60-75 хв</strong>"
+      - "🎯 <strong>Кидок + ведення</strong>"
+      - "🏀 <strong>М'яч + кільце</strong>"
+    exercises:
+      - id: d1-1
+        num: "01 · WARMUP"
+        title: "Розминка з ведення"
+        spec: "5 хв · стаціонарно"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Ball slaps — лясни м'яч між долонями 30 сек (розігрів кисті)"
+              - "Pound dribble правою — низько, з силою, до коліна, 30 сек"
+              - "Pound dribble лівою — те саме, 30 сек"
+              - "Crossover на місці — м'яч з руки в руку перед собою, 30 сек"
+              - "Між ногами вперед-назад, 30 сек"
+              - "Figure 8 — м'яч пропускаєш навколо ніг вісімкою, 60 сек"
+          - label: "Чому це працює"
+            type: text
+            html: "Розігрівається не тільки тіло, але і \"відчуття м'яча\" в руках. Це база перед будь-якою грою або кидком."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Не дивитись на м'яч.</strong> Підіймай голову, дивись вперед. У грі ти не зможеш дивитися вниз — звикай зараз."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=meTDNqy9XC4"
+            text: "Stationary Ball Handling"
+      - id: d1-2
+        num: "02 · SHOOTING FORM"
+        title: "Form Shooting (BEEF)"
+        spec: "50 з 1 м + 50 з 3 м"
+        blocks:
+          - label: "Принцип BEEF"
+            type: steps
+            items:
+              - "<strong>B</strong>alance — ноги на ширині плечей, коліна зігнуті, вага рівномірно"
+              - "<strong>E</strong>yes — очі на ціль (задня дужка кільця), не на м'яч"
+              - "<strong>E</strong>lbow — лікоть стріляючої руки прямо під м'ячем, 90°"
+              - "<strong>F</strong>ollow-through — після кидка кисть \"опускається в банку для печива\", пальці на ціль"
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Стань на 1 метр від кільця прямо перед ним"
+              - "Зроби 50 кидків — фокус ТІЛЬКИ на техніці, не на влучанні"
+              - "Відійди на 3 метри (вільні кидки), зроби ще 50"
+              - "Записуй % влучань на телефон щоразу"
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Друга рука штовхає м'яч.</strong> Ліва рука (якщо ти правша) ТІЛЬКИ підтримує м'яч збоку, не штовхає. Інакше м'яч летить вбік. Хвилювання на грі піде, коли техніка стане автоматичною."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=VtTllwaMGfg"
+            text: "BEEF Shooting Form"
+      - id: d1-3
+        num: "03 · LAYUPS"
+        title: "Mikan Drill"
+        spec: "3 × 20 повторів"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Стань під кільцем з правого боку"
+              - "Правою рукою — кидок з-під щита (від щитка). Поштовх лівою ногою"
+              - "Зловиш м'яч на льоту, перейди під ліву сторону"
+              - "Лівою рукою — кидок з лівої сторони. Поштовх правою ногою"
+              - "Чергуй сторони безперервно, цілься у верхній кут квадрата на щитку"
+              - "20 разів = 1 серія. Зроби 3 серії з відпочинком 30 сек"
+          - label: "Чому це працює"
+            type: text
+            html: "Розвиває \"м'яку руку\" біля кільця обома руками. У грі більшість легких очок ти набереш саме з-під щита, не з 3-очкової."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Кидаєш однією і тією ж рукою.</strong> Це найважливіше — обов'язково чергуй. Поштовх ногою — завжди ПРОТИЛЕЖНОЮ від руки, що кидає (права рука → ліва нога)."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=_VcY9M49JAs"
+            text: "Mikan Drill для початківців"
+      - id: d1-4
+        num: "04 · FREE THROWS"
+        title: "Штрафні"
+        spec: "50 кидків · фіксуй %"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Розроби свій рутинний \"ритуал\" перед кожним кидком (3 удари м'ячем, глибокий вдих, прицілився)"
+              - "Завжди роби однаково — це твоя точка опори у хвилюванні"
+              - "Кидай 50 штрафних поспіль. Записуй кількість влучань"
+              - "Мета через 4 тижні: 30+ із 50 (60%)"
+          - label: "Чому це працює"
+            type: text
+            html: "Штрафні — єдиний кидок у грі без захисника. Якщо не влучаєш тут — це чиста техніка + психологія. Прокачуй обидва."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Кидаєш по-різному кожен раз.</strong> Однаковий ритуал → однаковий результат. Спостерігай за NBA — у кожного гравця свій рутинний рух перед штрафним."
+      - id: d1-5
+        num: "05 · DRIBBLING"
+        title: "Ведення по майданчику"
+        spec: "10 проходів туди-назад"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Прохід 1-2: тільки правою рукою, голова піднята"
+              - "Прохід 3-4: тільки лівою рукою"
+              - "Прохід 5-6: на кожному штрафному — crossover (з руки в руку)"
+              - "Прохід 7-8: через ноги на кожному ривку"
+              - "Прохід 9-10: speed dribble — максимальна швидкість + jump stop в кінці"
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Дивишся на м'яч.</strong> Якщо не можеш вести з піднятою головою — ще не вмієш вести. Зменши швидкість, але не опускай очі."
+  - id: day2
+    tab: "День 2 · Захист"
+    meta:
+      - "⏱ <strong>60 хв</strong>"
+      - "🎯 <strong>Захист + кардіо</strong>"
+      - "🔥 <strong>Інтенсивно</strong>"
+    exercises:
+      - id: d2-1
+        num: "01 · FOOTWORK"
+        title: "Defensive Slides"
+        spec: "4 × 30 сек"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Захисна стійка: ноги ширше плечей, коліна зігнуті, спина пряма, руки розставлені"
+              - "Рухайся вбік приставним кроком — ведуча нога відштовхується, інша підтягується"
+              - "<strong>НЕ перехрещуй ноги!</strong> Якщо нападник побіжить — ти втратиш баланс"
+              - "30 сек у праву сторону → 30 сек у ліву. 4 повтори з 30 сек відпочинку"
+          - label: "Чому це працює"
+            type: text
+            html: "Це база захисту 1на1. Слайди — основний спосіб переміщатися збоку від нападника, не пускаючи його до кільця."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Стоїш занадто прямо.</strong> Нижчий центр тяжіння = швидші реакції. Уяви що сидиш на стільці — це правильна стійка."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=Ny-_VnE513o"
+            text: "Defensive Slides Tutorial"
+      - id: d2-2
+        num: "02 · DEFENSE"
+        title: "Closeout + Slide"
+        spec: "10 повторів кожен бік"
+        blocks:
+          - label: "Що таке Closeout"
+            type: text
+            html: "Closeout — це коли ти швидко зближуєшся з нападником який отримав м'яч, але стопориш себе щоб не пропустити його повз."
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Стань під кільцем (під щитом)"
+              - "Уяви що нападник з м'ячем на 3-очковій лінії"
+              - "Спринт до нього: руки високо, голосно крикни \"М'яч! М'яч!\""
+              - "Останні 2-3 кроки — короткі choppy steps, гальмуй"
+              - "В кінці — захисна стійка, руки вгору"
+              - "3 кроки слайдом вліво, потім 3 вправо"
+              - "10 повторів"
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Бігти на повній швидкості до кінця.</strong> Тоді нападник тебе обведе одним рухом. Гальмування за 2 кроки — ключ."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=lFY__uSOJIY"
+            text: "3 Defense Drills"
+      - id: d2-3
+        num: "03 · CONDITIONING"
+        title: "Інтервали Full Court"
+        spec: "8 × спринт + 60 сек відп."
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Стань на лицевій лінії з одного боку майданчика"
+              - "Спринт на максимумі до протилежної лицевої лінії і назад"
+              - "Засіки час спринту (~15-25 сек)"
+              - "Відпочинок рівно 60 сек"
+              - "Повтори 8 разів"
+              - "Записуй час кожного спринту — вони не повинні різнитись більше ніж на 2 сек"
+          - label: "Чому це працює"
+            type: text
+            html: "Баскетбол — це гра коротких вибухів. Тобі не треба бігти стабільно як марафонець — треба ВІДНОВЛЮВАТИСЬ між ривками. Це і тренує цей інтервал."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Перший спринт на 100%, останній на 50%.</strong> Краще 8 спринтів на 85% з однаковим часом, ніж нерівномірний \"вибух → смерть\"."
+      - id: d2-4
+        num: "04 · BALANCE"
+        title: "Jump Stops"
+        spec: "20 повторів"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Біжи з м'ячем (ведення) до штрафної лінії"
+              - "На лінії — невеличкий стрибок вперед"
+              - "Приземлення ОДНОЧАСНО на дві ноги, коліна зігнуті"
+              - "Низький центр тяжіння — як стійка приземлення кота"
+              - "Зупинись повністю, не падай вперед від інерції"
+              - "20 повторів — кожен раз з різної точки"
+          - label: "Чому це працює"
+            type: text
+            html: "ЦЕ напряму вирішує твою проблему з падіннями. Ти падав бо не вмієш гальмувати на швидкості. Jump stop = вміння зупинитись у будь-який момент."
+          - label: "Типова помилка"
+            type: mistakes
+            html: "<strong>Високий стрибок.</strong> Не треба підстрибувати — це майже \"плюх\" вперед. Чим нижче — тим стабільніше приземлення."
+          - label: "Відео"
+            type: video
+            href: "https://www.youtube.com/watch?v=hBRJF-fMZVo"
+            text: "Jump Stop Breakdown"
+      - id: d2-5
+        num: "05 · GAME REP"
+        title: "Кидки втомленим"
+        spec: "30 кидків після кардіо"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "Відразу після спринтів (без відпочинку!)"
+              - "З 3-х різних точок (5 кидків × 6 точок): праве крило, верх дуги, ліве крило, штрафна, лівий кут, правий кут"
+              - "Між точками — біг, не йдеш"
+              - "Фокус: зберегти техніку BEEF навіть втомленим"
+          - label: "Чому це працює"
+            type: text
+            html: "У реальній грі ти кидаєш на 4 хвилині після спринту, а не свіжим. Симулюй це."
+  - id: day3
+    tab: "День 3 · Гра"
+    meta:
+      - "⏱ <strong>60-90 хв</strong>"
+      - "🎯 <strong>Гра або імітація</strong>"
+      - "⚡ <strong>Застосування</strong>"
+    exercises:
+      - id: d3-1
+        num: "01 · WARMUP"
+        title: "Розминка кидків"
+        spec: "30 кидків · близько"
+        blocks:
+          - label: "Як виконувати"
+            type: steps
+            items:
+              - "10 кидків з 1 м від кільця — фокус на техніці"
+              - "10 кидків з 3 м (штрафна) — спокійно, ритмічно"
+              - "10 layups (5 правою + 5 лівою) — як в Mikan"
+          - label: "Чому це важливо"
+            type: text
+            html: "Це не тренування — це впевненість. 30 успішних кидків перед грою = ти йдеш на майданчик з відчуттям \"я можу\", а не \"а раптом промахнусь\"."
+      - id: d3-2
+        num: "02 · LIVE"
+        title: "Пікап-гра"
+        spec: "3на3 або 1на1 · 45 хв"
+        blocks:
+          - label: "Якщо є з ким грати"
+            type: steps
+            items:
+              - "3на3 — найкраще для прокачки. Більше дотиків з м'ячем ніж 5на5"
+              - "1на1 — ще краще для захисту. Нікуди подітись від нападника"
+              - "Перед грою постав собі 1-2 фокуси: \"сьогодні слідкую за позицією в захисті\" або \"роблю jump stop замість падіння\""
+          - label: "Якщо нікого немає — заміна"
+            type: steps
+            items:
+              - "Shooting under fatigue: 50 кидків з різних точок"
+              - "Між кидками — біг до 3-очкової і назад"
+              - "Імітуй гру: 5 кидків поспіль = \"очко\", промах = \"штраф\" (10 віджимань)"
+          - label: "Найголовніше"
+            type: mistakes
+            html: "<strong>Не намагайся показати все одразу.</strong> Один фокус на гру. Наступного разу — інший. Чотири пікап-гри = чотири прокачані навички."
+      - id: d3-3
+        num: "03 · COOLDOWN"
+        title: "Розтяжка + аналіз"
+        spec: "15 хв"
+        blocks:
+          - label: "Розтяжка"
+            type: steps
+            items:
+              - "Ікри — 30 сек кожна нога"
+              - "Стегна — 30 сек кожна"
+              - "Спина — кішка/корова, 1 хв"
+              - "Плечі (для кидка) — 30 сек кожне"
+          - label: "Аналіз гри"
+            type: text
+            html: "Запиши в нотатках на телефоні:"
+          - label: ""
+            type: steps
+            items:
+              - "Що сьогодні вдалося краще ніж минулого разу?"
+              - "Що було найскладніше?"
+              - "На що звертаю увагу наступну гру?"
+concepts:
+  - title: "Захисна позиція"
+    sub: "ВИПРАВЛЕННЯ ТВОЄЇ ГОЛОВНОЇ ПОМИЛКИ"
+    blocks:
+      - type: body
+        html: "У минулій грі ти стояв <strong>перед</strong> нападником — тобто між ним і його воротами. Це дозволяє йому просто пробігти повз тебе до твого кільця."
+      - type: key
+        html: "<strong>Правильна позиція:</strong> ти стоїш МІЖ нападником і СВОЇМ кільцем. Тобто ти \"захищаєш\" свою корзину, а нападник з м'ячем — перед тобою."
+      - type: body
+        html: "<strong>Правило одного кроку:</strong> залишай 1 крок між собою і нападником. Занадто близько — він тебе обведе. Занадто далеко — він спокійно кине."
+      - type: video
+        href: "https://www.youtube.com/watch?v=hbePHVqONzc"
+        text: "Defensive Positioning"
+  - title: "Spacing 5-out"
+    sub: "КУДИ БІГТИ КОЛИ НЕМА М'ЯЧА"
+    blocks:
+      - type: body
+        html: "Майданчик ділиться на <strong>5 зон</strong> по периметру: 2 кути, 2 крила, верх дуги. Ти і твої 4 партнери стоїте у різних зонах. <strong>Ніколи 2 гравці в одній зоні.</strong>"
+      - type: key
+        html: "<strong>Базове правило:</strong> якщо хтось вривається в твою зону — ти йдеш у вільну. Як шахи: одна фігура зрушила, інша займає її місце."
+      - type: body
+        html: "<strong>Cut after pass:</strong> передав м'яч → одразу біжи до кільця (cut). Захисник або відірветься від тебе, або відкриє свого партнера. Перевір це правило в наступній грі — спрацює."
+      - type: video
+        href: "https://www.youtube.com/watch?v=ySbLZmFWnSw"
+        text: "Spacing для початківців"
+  - title: "Прийом передачі"
+    sub: "ЯК ОРІЄНТУВАТИСЬ З М'ЯЧЕМ"
+    blocks:
+      - type: body
+        html: "<strong>До прийому:</strong> підіймай руки як ціль (target hands), голосно \"тут!\" або просто кивни головою."
+      - type: body
+        html: "<strong>Під час прийому:</strong> очі тільки на м'ячі до того моменту як він в руках."
+      - type: key
+        html: "<strong>Triple threat позиція:</strong> прийняв м'яч → одразу низька стійка, м'яч біля стегна, можеш або кинути, або повести, або передати. Це твоя \"стартова\" позиція з м'ячем."
+      - type: body
+        html: "<strong>1-2-3 правило:</strong> прийняв м'яч → 1 секунда оцінка ситуації → 2 секунди прийняття рішення → 3 секунди дія. Не швидше і не повільніше."
+  - title: "Витривалість у грі"
+    sub: "ЯК ВИТРИМАТИ ДО КІНЦЯ"
+    blocks:
+      - type: body
+        html: "Баскетбол — не біг марафону. Це 20+ <strong>коротких ривків</strong> з паузами. Якщо тренуєш марафонський біг — програєш у грі."
+      - type: key
+        html: "<strong>Ключ:</strong> навчись відновлюватися між ривками. Глибокий вдих носом, видих ротом, низька стійка з руками на колінах ТІЛЬКИ під час пауз гри. Не показуй втому в активній фазі."
+      - type: body
+        html: "<strong>Економія енергії:</strong> не бігай безглуздо. Якщо м'яч на іншому боці і ти не маєш ким займатися — стій у позиції допомоги (help defense). Швидко перемикайся, але не бігай по колу."
+  - title: "Підготовка до гри"
+    sub: "МОЗОЛІ + СПОРЯДЖЕННЯ"
+    blocks:
+      - type: body
+        html: "<strong>Кросівки:</strong> тільки баскетбольні (Nike Lebron Witness, Adidas Dame, Puma Court Rider — бюджетні варіанти). Кросівки для бігу не підходять — пласка підошва без бічної підтримки = травма стопи."
+      - type: body
+        html: "<strong>Розноси їх:</strong> мінімум 2-3 тренування перед грою. Нові кросівки на грі = гарантовані мозолі."
+      - type: key
+        html: "<strong>Профілактика мозолів:</strong> 1) баскетбольні шкарпетки (товстіші), 2) лейкопластир або кінезіотейп на проблемних місцях ПЕРЕД грою, 3) вазелін на гарячі точки, 4) тримай ноги сухими — змінюй шкарпетки якщо довго граєш."
+---
+<div class="container">
+
+  <div class="hero">
+    <div class="label">Individual Training Plan / V1</div>
+    <h1>Стань <span class="accent">кращим</span><br>до наступної гри</h1>
+    <p class="subtitle">3 тренування на тиждень. Майданчик + м'яч. Все що треба для прогресу за 4 тижні.</p>
+  </div>
+
+  <div class="progress-section">
+    <div class="progress-header">
+      <div class="progress-title">Загальний прогрес</div>
+      <div class="progress-stats">
+        <span class="num" id="completedCount">0</span><span class="total">/<span id="totalCount">0</span></span>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <button class="reset-btn" onclick="resetProgress()">Скинути прогрес</button>
+  </div>
+
+  <div class="tabs" id="tabs">
+    {% for day in days %}<button class="tab{% if loop.first %} active{% endif %}" data-tab="{{ day.id }}">{{ day.tab }}</button>
+    {% endfor %}<button class="tab" data-tab="concepts">Концепти</button>
+  </div>
+
+  {% for day in days %}
+  <div class="panel{% if loop.first %} active{% endif %}" id="{{ day.id }}">
+    <div class="day-meta">
+      {% for m in day.meta %}<div class="meta-chip">{{ m | safe }}</div>
+      {% endfor %}
+    </div>
+
+    {% for ex in day.exercises %}
+    <div class="exercise" data-id="{{ ex.id }}">
+      <div class="exercise-header" onclick="toggleExercise(this)">
+        <div class="checkbox" onclick="toggleCheck(event, this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="exercise-main">
+          <div class="exercise-num">{{ ex.num }}</div>
+          <div class="exercise-title">{{ ex.title }}</div>
+          <div class="exercise-spec">{{ ex.spec }}</div>
+        </div>
+        <svg class="expand-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="exercise-body"><div class="exercise-inner">
+        {% for b in ex.blocks %}{% if b.type == "steps" %}{% if b.label %}<div class="section-label">{{ b.label }}</div>
+        {% endif %}<ol class="steps">
+          {% for item in b.items %}<li>{{ item | safe }}</li>
+          {% endfor %}</ol>
+        {% elif b.type == "text" %}<div class="section-label">{{ b.label }}</div>
+        <p style="font-size:13px;line-height:1.55;">{{ b.html | safe }}</p>
+        {% elif b.type == "mistakes" %}<div class="section-label">{{ b.label }}</div>
+        <div class="mistakes">{{ b.html | safe }}</div>
+        {% elif b.type == "video" %}<div class="section-label">{{ b.label }}</div>
+        <a class="video-link" href="{{ b.href }}" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> {{ b.text }}</a>
+        {% endif %}{% endfor %}
+      </div></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+  <div class="panel" id="concepts">
+    <div class="day-meta">
+      <div class="meta-chip">📚 <strong>Теорія</strong></div>
+      <div class="meta-chip">🧠 <strong>Ігровий IQ</strong></div>
+    </div>
+
+    {% for c in concepts %}
+    <div class="concept">
+      <div class="concept-title">{{ c.title }}</div>
+      <div class="concept-sub">{{ c.sub }}</div>
+      {% for b in c.blocks %}{% if b.type == "body" %}<div class="concept-body">{{ b.html | safe }}</div>
+      {% elif b.type == "key" %}<div class="key-point">{{ b.html | safe }}</div>
+      {% elif b.type == "video" %}<a class="video-link" href="{{ b.href }}" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg> {{ b.text }}</a>
+      {% endif %}{% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="footer-note">Прогрес зберігається автоматично.<br>Натискай на вправу щоб розгорнути деталі. Тапни галочку коли виконав.</div>
+
+</div>
