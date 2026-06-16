@@ -1,0 +1,47 @@
+---
+layout: base.njk
+permalink: /index.html
+accentBar: true
+title: Командний центр
+styles:
+  - /assets/css/hub.css
+fonts: "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
+---
+<div class="wrap">
+  <header class="top">
+    <div class="kicker"><b>{{ site.kickerBadge }}</b> · {{ site.kicker }}</div>
+    <h1>{{ site.title }}</h1>
+    <p class="sub">{{ site.subtitle }}</p>
+    {% if site.updated %}<div class="updated">Оновлено: {{ site.updated }}</div>{% endif %}
+  </header>
+
+  <main>
+  {% for group in site.groups %}
+    {% set cards = collections.hubPages | hubGroup(group.id) %}
+    {% if cards.length %}
+    <section class="group">
+      <div class="group-head">
+        <h2>{{ group.label }}</h2>
+        {% if group.note %}<span class="note">{{ group.note }}</span>{% endif %}
+      </div>
+      <div class="grid{% if cards | anyFeatured %} featured{% endif %}">
+      {% for item in cards %}
+        {% set h = item.data.hub %}
+        <a class="card{% if h.featured %} big{% endif %}" href="{{ item.url }}" style="--c:{{ h.accent or '#7c6af7' }}">
+          {% if h.meta %}<div class="meta">{{ h.meta }}</div>{% endif %}
+          <h3>{{ h.title }}</h3>
+          {% if h.summary %}<p>{{ h.summary }}</p>{% endif %}
+          {% if h.chips | length %}<div class="tags">{% for t in h.chips %}<span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
+          <div class="go">Відкрити →</div>
+        </a>
+      {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+  </main>
+
+  <footer>
+    Приватний збір сторінок · {% if site.updated %}Оновлено: {{ site.updated }}{% endif %} · усі сторінки <code>noindex</code>
+  </footer>
+</div>

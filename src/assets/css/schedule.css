@@ -1,0 +1,123 @@
+:root{
+  --bg:#0d0f14;
+  --bg2:#12151c;
+  --surface:#181c25;
+  --surface2:#1f2430;
+  --line:#272d3a;
+  --txt:#e9ecf3;
+  --muted:#929bad;
+  --strength:#5b8cff;
+  --boxing:#ff5470;
+  --basket:#ff9447;
+  --skate:#2dd4bf;
+  --driving:#f5c451;
+  --work:#8b93a7;
+  --rest:#3a4150;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased}
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(1100px 500px at 12% -10%, rgba(91,140,255,.10), transparent 60%),
+    radial-gradient(900px 480px at 95% 0%, rgba(45,212,191,.08), transparent 55%),
+    var(--bg);
+  padding:0 0 60px;
+}
+.accent-bar{height:4px;background:linear-gradient(90deg,var(--strength),var(--boxing),var(--basket),var(--skate),var(--driving))}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+header.top{padding:26px 0 14px}
+.kicker{font-family:'Oswald';letter-spacing:.26em;text-transform:uppercase;font-size:12px;color:var(--muted);font-weight:500}
+.kicker b{color:var(--strength);font-weight:600}
+h1{font-family:'Oswald';font-weight:700;font-size:clamp(28px,6vw,46px);line-height:.98;text-transform:uppercase;letter-spacing:.01em;margin:6px 0 6px}
+h1 .wk{color:var(--strength)}
+.sub{color:var(--muted);font-size:14px;max-width:660px;line-height:1.5}
+
+.summary{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.scount{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:8px 12px}
+.scount .num{font-family:'Oswald';font-weight:700;font-size:18px}
+.scount .lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:18px 0 10px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:7px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--txt);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer;transition:all .15s;user-select:none}
+.chip:hover{border-color:#3a4150}
+.chip.off{opacity:.34;filter:grayscale(.6)}
+.chip .dot{width:10px;height:10px}
+.right-ctrl{display:flex;gap:8px;align-items:center}
+.seg{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:3px}
+.seg button{font-family:'Oswald';letter-spacing:.06em;text-transform:uppercase;font-size:12px;font-weight:600;color:var(--muted);background:none;border:none;padding:7px 13px;border-radius:7px;cursor:pointer;transition:all .15s}
+.seg button.active{background:var(--surface2);color:var(--txt)}
+.btn-ics{font-family:'Oswald';letter-spacing:.05em;text-transform:uppercase;font-size:12px;font-weight:600;color:#0d0f14;background:linear-gradient(180deg,#fff,#d7dcec);border:none;border-radius:10px;padding:9px 15px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:transform .12s}
+.btn-ics:active{transform:scale(.97)}
+
+/* GRID */
+.gridscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:16px;background:var(--bg2)}
+.cal{display:grid;grid-template-columns:54px repeat(7,minmax(96px,1fr));min-width:740px}
+.corner{border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.dayhead{position:sticky;top:0;z-index:5;background:var(--bg2);border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:11px 6px;text-align:center}
+.dayhead:last-child{border-right:none}
+.dayhead.today{background:linear-gradient(180deg,rgba(91,140,255,.16),transparent)}
+.dayhead .dn{font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:15px}
+.dayhead .dd{font-size:11px;color:var(--muted);margin-top:1px}
+.dayhead.today .dn{color:var(--strength)}
+
+.timecol{border-right:1px solid var(--line);position:relative}
+.tlabel{position:absolute;right:6px;font-size:10px;color:var(--muted);font-family:'Oswald';letter-spacing:.04em;transform:translateY(-6px)}
+
+.daycol{position:relative;border-right:1px solid var(--line)}
+.daycol:last-child{border-right:none}
+.daycol.today{background:rgba(91,140,255,.04)}
+.hourline{position:absolute;left:0;right:0;border-top:1px solid var(--line);opacity:.6}
+.hourline.half{border-top:1px dashed var(--line);opacity:.28}
+
+.ev{position:absolute;left:4px;right:4px;border-radius:9px;padding:5px 7px;overflow:hidden;cursor:pointer;border-left:3px solid var(--c);background:var(--evbg);transition:transform .12s, box-shadow .12s;display:flex;flex-direction:column;gap:1px}
+.ev:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.4);z-index:4}
+.ev .et{font-weight:700;font-size:11.5px;line-height:1.12}
+.ev .etime{font-family:'Oswald';font-size:10px;color:var(--muted);letter-spacing:.04em}
+.ev.assumed{border-left-style:dashed}
+.ev.tiny{padding:3px 7px}
+.ev.tiny .et{font-size:10.5px}
+
+/* LIST */
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.dcard{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:14px 14px 12px;display:flex;flex-direction:column}
+.dcard.today{border-color:var(--strength);box-shadow:0 0 0 1px rgba(91,140,255,.25)}
+.dcard h3{font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:17px;display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.dcard h3 small{font-family:'Manrope';font-weight:600;font-size:12px;color:var(--muted);letter-spacing:0;text-transform:none}
+.dcard h3 .todaytag{margin-left:auto;font-size:10px;color:var(--strength);font-family:'Manrope';font-weight:700}
+.litem{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);cursor:pointer}
+.litem:first-of-type{border-top:none}
+.litem .bar{width:3px;border-radius:3px;background:var(--c);flex:none;margin-top:2px}
+.litem .lt{font-weight:700;font-size:13.5px;line-height:1.2}
+.litem .ltime{font-family:'Oswald';font-size:11px;color:var(--muted);letter-spacing:.03em;margin-top:2px}
+.litem .ln{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+.restrow{font-size:12px;color:var(--muted);font-style:italic;padding-top:8px;border-top:1px dashed var(--line);margin-top:6px}
+.emptyday{color:var(--muted);font-size:12.5px;font-style:italic;padding:6px 0}
+
+.notes{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--c,var(--line));border-radius:12px;padding:12px 14px}
+.note b{font-family:'Oswald';font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-size:12.5px;display:block;margin-bottom:4px}
+.note p{font-size:12.5px;color:var(--muted);line-height:1.4}
+
+.overlay{position:fixed;inset:0;background:rgba(6,8,12,.6);backdrop-filter:blur(3px);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.overlay.open{display:flex}
+.sheet{background:var(--surface);border:1px solid var(--line);border-radius:18px 18px 0 0;width:100%;max-width:460px;padding:20px 20px 26px;transform:translateY(100%);transition:transform .25s}
+.overlay.open .sheet{transform:translateY(0)}
+@media(min-width:640px){.overlay{align-items:center}.sheet{border-radius:18px}}
+.sheet .stype{display:inline-flex;align-items:center;gap:7px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--c);font-weight:600}
+.sheet h2{font-family:'Oswald';font-weight:700;font-size:24px;text-transform:uppercase;letter-spacing:.01em;margin:8px 0 4px}
+.sheet .swhen{font-family:'Oswald';color:var(--muted);font-size:13.5px;letter-spacing:.03em;margin-bottom:12px}
+.sheet-ex{margin:0 0 14px}
+.exrow{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-top:1px solid var(--line);font-size:13.5px;align-items:baseline}
+.exrow:first-child{border-top:none}
+.exrow .exn{color:var(--txt);line-height:1.25}
+.exrow .exn b{color:var(--c);font-family:'Oswald';font-weight:600;margin-right:4px}
+.exrow .exs{font-family:'Oswald';color:var(--muted);white-space:nowrap;letter-spacing:.03em;font-size:13px}
+.sheet .snote{font-size:14px;color:var(--txt);line-height:1.5}
+.sheet .close{margin-top:18px;width:100%;background:var(--surface2);border:1px solid var(--line);color:var(--txt);font-family:'Oswald';text-transform:uppercase;letter-spacing:.08em;font-weight:600;font-size:13px;padding:11px;border-radius:11px;cursor:pointer}
+
+.footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}
