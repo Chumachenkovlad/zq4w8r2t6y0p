@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Test (build + assertions)
+        run: npm test
+
       - name: Build site (Eleventy)
         run: npm run build
 

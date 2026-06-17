@@ -4,7 +4,7 @@ permalink: /index.html
 accentBar: true
 title: Командний центр
 styles:
-  - /assets/css/hub.css
+  - assets/css/hub.css
 fonts: "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap"
 ---
 <div class="wrap">
@@ -27,7 +27,7 @@ fonts: "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=
       <div class="grid{% if cards | anyFeatured %} featured{% endif %}">
       {% for item in cards %}
         {% set h = item.data.hub %}
-        <a class="card{% if h.featured %} big{% endif %}" href="{{ item.url }}" style="--c:{{ h.accent or '#7c6af7' }}">
+        <a class="card{% if h.featured %} big{% endif %}" href="{{ item.url | relurl }}" style="--c:{{ h.accent or '#7c6af7' }}">
           {% if h.meta %}<div class="meta">{{ h.meta }}</div>{% endif %}
           <h3>{{ h.title }}</h3>
           {% if h.summary %}<p>{{ h.summary }}</p>{% endif %}

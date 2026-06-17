@@ -34,6 +34,10 @@ module.exports = function (eleventyConfig) {
     (pages || []).some((p) => p.data.hub && p.data.hub.featured)
   );
 
+  // Абсолютний URL Eleventy (/schedule.html) → відносний (schedule.html),
+  // щоб посилання працювали і в підкаталозі (GitHub Pages проєкту), і через file://.
+  eleventyConfig.addFilter("relurl", (u) => String(u).replace(/^\/+/, ""));
+
   return {
     dir: {
       input: "src",
